@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Fahrenheit to Celsius" />
+  <meta name="description" content="Burger" />
   <meta name="keywords" content="mths, ics2o" />
   <meta name="author" content="Adam" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Fahrenheit to Celsius</title>
+  <title>Burger</title>
 </head>
 <body>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -21,31 +21,105 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Fahrenheit to Celsius</span>
+        <span class="mdl-layout-title">Burger</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <div class="right-image">
-        <img src="./images/notebook-animation.svg" alt="laptop image" />
-      </div>
-      <div class="page-content">Enter ...×</div>
+      <div class="page-content">Gluten free buns, vegan pattys, and toppings all cost $0.25 each. The base cost of a burger is $4.</div>
       <br />
       <!-- Simple Textfield for integers-->
       <form action="#">
-        <div class="mdl-textfield mdl-js-textfield">
-          <!-- input pattern attribute -->
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="length" />
-          <!-- mdl-textfield__label -->
-          <label class="mdl-textfield__label" for="demo-input">Some Number ... (Unit)</label>
-          <!-- class "mdl-textfield__error" -->
-          <span class="mdl-textfield__error">Input is not a number</span>
+        <br />
+        <p>Choose a bun</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="normal-bun">
+            <input type="radio" id="normal-bun" class="mdl-radio__button" name="bun" value="1" checked>
+            <span class="mdl-radio__label">Normal Bun</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="gluten-free-bun">
+            <input type="radio" id="gluten-free-bun" class="mdl-radio__button" name="bun" value="2">
+            <span class="mdl-radio__label">Gluten Free Bun</span>
+          </label>
         </div>
         <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()">
-          Button
-        </button>
+        <p>Choose a patty</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="normal-patty">
+            <input type="radio" id="normal-patty" class="mdl-radio__button" name="patty" value="1" checked>
+            <span class="mdl-radio__label">Normal Patty</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="vegan-patty">
+            <input type="radio" id="vegan-patty" class="mdl-radio__button" name="patty" value="2">
+            <span class="mdl-radio__label">Vegan Patty</span>
+          </label>
+        </div>
+        <br />
+        <p>Add lettuce</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-lettuce">
+            <input type="radio" id="no-lettuce" class="mdl-radio__button" name="lettuce" value="1" checked>
+            <span class="mdl-radio__label">No Lettuce</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes-lettuce">
+            <input type="radio" id="yes-lettuce" class="mdl-radio__button" name="lettuce" value="2">
+            <span class="mdl-radio__label">Lettuce</span>
+          </label>
+        </div>
+        <br />
+        <p>Add tomato</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-tomato">
+            <input type="radio" id="no-tomato" class="mdl-radio__button" name="tomato" value="1" checked>
+            <span class="mdl-radio__label">No Tomato</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes-tomato">
+            <input type="radio" id="yes-tomato" class="mdl-radio__button" name="tomato" value="2">
+            <span class="mdl-radio__label">Tomato</span>
+          </label>
+        </div>
+        <br />
+        <p>Add bacon</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-bacon">
+            <input type="radio" id="no-bacon" class="mdl-radio__button" name="bacon" value="1" checked>
+            <span class="mdl-radio__label">No Bacon</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes-bacon">
+            <input type="radio" id="yes-bacon" class="mdl-radio__button" name="bacon" value="2">
+            <span class="mdl-radio__label">Bacon</span>
+          </label>
+        </div>
+        <br />
+        <p>Add ketchup</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-ketchup">
+            <input type="radio" id="no-ketchup" class="mdl-radio__button" name="ketchup" value="1" checked>
+            <span class="mdl-radio__label">No Ketchup</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes-ketchup">
+            <input type="radio" id="yes-ketchup" class="mdl-radio__button" name="ketchup" value="2">
+            <span class="mdl-radio__label">Ketchup</span>
+          </label>
+        </div>
+        <br />
+        <p>Add mustard</p>
+        <br />
+        <div>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="no-mustard">
+            <input type="radio" id="no-mustard" class="mdl-radio__button" name="mustard" value="1" checked>
+            <span class="mdl-radio__label">No Mustard</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="yes-mustard">
+            <input type="radio" id="yes-mustard" class="mdl-radio__button" name="mustard" value="2">
+            <span class="mdl-radio__label">Mustard</span>
+          </label>
+        </div>
       </form>
       <br />
       <br />
