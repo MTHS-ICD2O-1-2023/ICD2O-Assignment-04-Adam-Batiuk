@@ -6,25 +6,41 @@
 
 "use strict"
 
-function myButtonClicked() {
-  // Define the lengths of the three sides of a triangle
-  const sidea = parseInt(document.getElementById("side-a").value)
-  const sideb = parseInt(document.getElementById("side-b").value)
-  const sidec = parseInt(document.getElementById("side-c").value)
+window.oninput = function () {
+  // input
+  const bun = document.getElementById("gluten-free-bun").checked
+  const patty = document.getElementById("vegan-patty").checked
+  const lettuce = document.getElementById("yes-lettuce").checked
+  const tomato = document.getElementById("yes-tomato").checked
+  const bacon = document.getElementById("yes-bacon").checked
+  const ketchup = document.getElementById("yes-ketchup").checked
+  const mustard = document.getElementById("yes-mustard").checked
 
-  //Calculate the semi-perimeter of the triangle
-  const s = (sidea + sideb + sidec) / 2
+  // define price
+  const burgerBasePrice = 4.00
+  let burgerPrice = burgerBasePrice
 
-  // Use Heron's formula to calculate the area of the triangle
-  const area = Math.sqrt(s * ((s - sidea) * (s - sideb) * (s - sidec)))
-  const roundArea = Math.round(area * 100) / 100
-  const perimeter = s * 2
-
-  if($area !== $area) {
-    document.getElementById("answer").innerHTML = "Area is not a number"
-}
-else {
-    document.getElementById("answer").innerHTML = "Area is: " + roundArea + " cm²"
-}
-document.getElementById("perimeter").innerHTML = "Perimeter is: " + perimeter + " cm"
+  // change price
+  if (bun == true) {
+    burgerPrice = burgerPrice + 0.50
+  }
+  if (patty == true) {
+    burgerPrice = burgerPrice + 0.50
+  }
+  if (lettuce == true) {
+    burgerPrice = burgerPrice + 0.25
+  }
+  if (tomato == true) {
+    burgerPrice = burgerPrice + 0.25
+  }
+  if (bacon == true) {
+    burgerPrice = burgerPrice + 0.25
+  }
+  if (ketchup == true) {
+    burgerPrice = burgerPrice + 0.25
+  }
+  if (mustard == true) {
+    burgerPrice = burgerPrice + 0.25
+  }
+  document.getElementById("answer").innerHTML = "Price: $" + burgerPrice.toFixed(2)
 }
