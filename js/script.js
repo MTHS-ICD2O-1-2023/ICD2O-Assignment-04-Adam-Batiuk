@@ -42,5 +42,6 @@ window.oninput = function () {
   if (mustard == true) {
     burgerPrice = burgerPrice + 0.25
   }
+  // output
   document.getElementById("answer").innerHTML = "Price: $" + burgerPrice.toFixed(2)
 }
